@@ -1,9 +1,6 @@
 # スコアボード作成
-    scoreboard objectives add S.Rif_Time dummy
     scoreboard objectives add S.Rif_Charge dummy
-    scoreboard objectives add S.Rif_Life dummy
-    scoreboard objectives add S.Rif_Temp dummy
-    scoreboard objectives add S.Rif_Rec dummy
+    scoreboard objectives add S.Rif_Reload dummy
 
 # Chuz.Vector0が存在しなければ召喚
     forceload add 0 0 0 0
@@ -25,6 +22,7 @@
 # 飛び道具の弾速
     scoreboard objectives add Chuz.Range dummy
     scoreboard objectives add Chuz.Speed dummy
+    scoreboard objectives add Chuz.Recursion dummy
 
 # ダメージ受けたときのやつ
     scoreboard objectives add Chuz.HitCheck dummy
