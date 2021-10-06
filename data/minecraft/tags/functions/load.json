@@ -1,5 +1,5 @@
 {
   "values": [
-    "scoped_rifle:load"
+    "scoped_rifle:load","csr_score_damage:core/init","score_to_health:load","forward_spreader:core/load"
   ]
 }
