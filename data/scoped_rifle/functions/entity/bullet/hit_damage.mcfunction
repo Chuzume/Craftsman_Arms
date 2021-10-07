@@ -14,3 +14,4 @@
 # ダメージを設定
     execute store result storage csr_score_damage: Damage int 1 run data get storage csr_score_damage: Damage
     execute if entity @s[type=!end_crystal] run function csr_score_damage:api/attack
+    data remove storage csr_score_damage: Damage

@@ -1,4 +1,7 @@
 
+# ルールが弾使うモードなら弾を減らす
+    execute if score $Chuz.Setting S.Rif_Rule1 matches 1 run clear @s chain_command_block{ChuzData:{ItemID:Heavy_Bullet}} 1
+
 # 対象スロットの残り使用回数取得
     execute store result score $Ammo Chuz.Temporary run data get storage chuz:context Item.Mainhand.tag.ChuzData.Ammo
 
@@ -17,3 +20,6 @@
     data modify block 100001 0 100000 Items set value []
     data modify block 100001 0 100000 Items append from storage chuz:context Item
     loot replace entity @s weapon.mainhand 1 mine 100001 0 100000 debug_stick
+
+# スコアリセット
+    scoreboard players reset @s S.Rif_Reload

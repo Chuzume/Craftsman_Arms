@@ -3,7 +3,7 @@
     execute as @a at @s run function scoped_rifle:storage
 
 # 飛び道具チェック 
-    execute as @e[type=armor_stand,tag=S.Rif_Projectile] at @s run function scoped_rifle:entity/projectile_check
+    execute as @e[type=armor_stand,tag=S.Rif_Projectile] at @s run function scoped_rifle:entity/bullet/tick
 
 # リセット
-    #scoreboard players reset @a[scores={S.Rif_Shot=0..}] S.Rif_Shot
+    scoreboard players set @a[scores={S.Rif_Sneak=1..}] S.Rif_Sneak 0

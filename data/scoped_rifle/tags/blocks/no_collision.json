@@ -47,6 +47,7 @@
         "minecraft:redstone_wire",
         "minecraft:scaffolding",
         "minecraft:seagrass",
+        "minecraft:snow",
         "minecraft:small_dripleaf",
         "minecraft:soul_torch",
         "minecraft:soul_wall_torch",
@@ -79,6 +80,7 @@
         "#minecraft:rails",
         "#minecraft:saplings",
         "#minecraft:standing_signs",
+        "#minecraft:trapdoors",
         "#minecraft:wall_corals",
         "#minecraft:wall_signs"
     ]
