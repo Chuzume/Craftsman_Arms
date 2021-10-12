@@ -12,10 +12,10 @@
             "item": "minecraft:gold_ingot"
         },
         "O": {
-            "item": "minecraft:oak_planks"
+            "tag": "minecraft:planks"
         },
         "_": {
-            "item": "minecraft:oak_slab"
+            "tag": "minecraft:wooden_slabs"
         },
         "I": {
             "item": "minecraft:iron_trapdoor"

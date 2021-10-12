@@ -6,17 +6,17 @@
 # スコープライフル
     # 手放すとリロードリセット
         execute unless data storage chuz:context Item.Mainhand.tag.ChuzData{ItemID:Craftsman_Scoped_Rifle} run scoreboard players reset @s S.Rif_Charge
-        #execute unless data storage chuz:context Item.Mainhand.tag.ChuzData{ItemID:Craftsman_Scoped_Rifle} run function scoped_rifle:item/craftsman_scoped_rifle/score_reset
     # メインハンドに入ってる時のメイン処理
         execute if data storage chuz:context Item.Mainhand.tag.ChuzData{ItemID:Craftsman_Scoped_Rifle} run function scoped_rifle:item/craftsman_scoped_rifle/main
 
-# スコープライフル
-    # 手放すとリロードリセット
-        #execute unless data storage chuz:context Item.Mainhand.tag.ChuzData{ItemID:Craftsman_Scoped_Rifle} run function scoped_rifle:item/craftsman_scoped_rifle/score_reset
+# ショットガン
     # メインハンドに入ってる時のメイン処理
         execute if data storage chuz:context Item.Mainhand.tag.ChuzData{ItemID:Craftsman_Shotgun} run function scoped_rifle:item/craftsman_shotgun/main
 
 # 共通処理
+# 手放すとリロードリセット
+        execute unless entity @s[tag=S.Rif_Hold] run function scoped_rifle:item/craftsman_scoped_rifle/score_reset
+        tag @s[tag=S.Rif_Hold] remove S.Rif_Hold
     # オフハンドに入れると戻ってくる
         execute if data storage chuz:context Item.Offhand.tag.ChuzData{NoOffhand:true} run function scoped_rifle:item/no_offhand
 

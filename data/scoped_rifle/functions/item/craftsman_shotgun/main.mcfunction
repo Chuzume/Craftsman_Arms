@@ -1,11 +1,13 @@
 
+# 今持ってるよ
+    tag @s add S.Rif_Hold
+
 # 発砲
     execute if entity @s[scores={S.Rif_Shot=0..}] unless score @s S.Rif_Pump matches 0.. unless data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function scoped_rifle:item/craftsman_shotgun/fire/normal
 
 # ポンプアクション
     scoreboard players remove @s[scores={S.Rif_Pump=0..}] S.Rif_Pump 1
-    scoreboard players set @s[scores={S.Rif_Shot=0..,S.Rif_Pump=9..10}] S.Rif_Pump 0
-    execute if score @s S.Rif_Pump matches 9..10 run playsound minecraft:block.note_block.xylophone player @s ~ ~ ~ 1 1.5
+    execute if score @s S.Rif_Pump matches 10 run function scoped_rifle:item/craftsman_shotgun/pump_sound
     execute if score @s S.Rif_Pump matches ..0 run function scoped_rifle:item/craftsman_shotgun/pump_finish
 
 # 残弾0なら失敗

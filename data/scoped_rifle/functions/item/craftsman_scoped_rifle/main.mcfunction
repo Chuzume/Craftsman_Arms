@@ -1,10 +1,9 @@
 
+# 今持ってるよ
+    tag @s add S.Rif_Hold
 
 # スニークでチャージ
     scoreboard players add @s[scores={S.Rif_Sneak=0..}] S.Rif_Charge 1 
-
-# 弾切れ時
-    #execute if data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} in overworld run function scoped_rifle:item/potion_launcher/out_of_ammo
 
 # チャージ
     execute if entity @s[scores={S.Rif_Charge=5}] run playsound minecraft:block.stone_button.click_on player @a ~ ~ ~ 1 1
@@ -12,10 +11,14 @@
     execute if entity @s[scores={S.Rif_Charge=10}] run playsound minecraft:block.stone_button.click_on player @a ~ ~ ~ 1 2
     execute if entity @s[scores={S.Rif_Charge=10}] run playsound minecraft:block.iron_door.open player @a ~ ~ ~ 1 1.5
     execute if entity @s[scores={S.Rif_Charge=13}] run playsound minecraft:item.crossbow.loading_end player @s ~ ~ ~ 2 1.5
-
+    execute if entity @s[scores={S.Rif_Charge=30}] run playsound minecraft:block.stone_button.click_on player @a ~ ~ ~ 1 2
+    execute if entity @s[scores={S.Rif_Charge=30}] run playsound minecraft:block.iron_door.open player @a ~ ~ ~ 1 2
 
 # 離して発砲
-    execute if score @s[scores={S.Rif_Sneak=0}] S.Rif_Charge matches 13.. unless data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function scoped_rifle:item/craftsman_scoped_rifle/fire/charged
+    execute if score @s[scores={S.Rif_Sneak=0}] S.Rif_Charge matches 13..29 unless data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function scoped_rifle:item/craftsman_scoped_rifle/fire/charged
+
+# シャープシュート
+    execute if score @s[scores={S.Rif_Sneak=0}] S.Rif_Charge matches 30.. unless data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function scoped_rifle:item/craftsman_scoped_rifle/fire/sharpshoot
 
 # 残弾0なら失敗
     execute if score @s[scores={S.Rif_Sneak=0}] S.Rif_Charge matches 13.. if data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function scoped_rifle:item/craftsman_scoped_rifle/fire/out_of_ammo
