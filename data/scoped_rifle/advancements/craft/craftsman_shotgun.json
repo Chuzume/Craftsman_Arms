@@ -1,0 +1,13 @@
+{
+  "criteria": {
+    "unlock": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "scoped_rifle:craftsman_shotgun"
+      }
+    }
+  },
+  "rewards": {
+    "function": "scoped_rifle:craft/craftsman_shotgun"
+  }
+}
