@@ -1,5 +1,7 @@
 # スコアボード作成
     scoreboard objectives add S.Rif_Sneak minecraft.custom:sneak_time
+    scoreboard objectives add S.Rif_Shot minecraft.used:crossbow
+    scoreboard objectives add S.Rif_Pump dummy
     scoreboard objectives add S.Rif_Charge dummy
     scoreboard objectives add S.Rif_Reload dummy
     scoreboard objectives add S.Rif_Ready dummy

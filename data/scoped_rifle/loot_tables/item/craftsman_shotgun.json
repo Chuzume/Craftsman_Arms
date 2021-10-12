@@ -9,7 +9,7 @@
             "functions": [
               {
                 "function": "minecraft:set_nbt",
-                "tag": "{display:{Name:'{\"text\":\"Craftsman Shotgun\",\"color\":\"aqua\",\"italic\":false}',Lore:['{\"text\":\" \"}','{\"text\":\"[RClick: Fire]\",\"color\":\"white\",\"italic\":false}','{\"text\":\"[Sneak: Choke]\",\"color\":\"white\",\"italic\":false}','{\"text\":\"[Ammo: Shotshell]\",\"color\":\"white\",\"italic\":false}','{\"text\":\" \"}','{\"keybind\":\"\\\\\"シンプルで強力な、ポンプアクション式散弾銃。\\\\\"\",\"color\":\"gray\",\"italic\":false}']},CustomModelData:31,Charged:1b,ChuzData:{Ammo:0,AmmoUse:1,ItemID:Craftsman_Shotgun,RawName:'{\"text\":\"Craftsman Shotgun\",\"color\":\"aqua\",\"italic\":false}'}}"
+                "tag": "{display:{Name:'{\"text\":\"Craftsman Shotgun\",\"color\":\"aqua\",\"italic\":false}',Lore:['{\"text\":\" \"}','{\"text\":\"[RClick: Fire]\",\"color\":\"white\",\"italic\":false}','{\"text\":\"[Sneak: Choke]\",\"color\":\"white\",\"italic\":false}','{\"text\":\"[Ammo: Shotshell]\",\"color\":\"white\",\"italic\":false}','{\"text\":\" \"}','{\"keybind\":\"\\\\\"シンプルで強力な、ポンプアクション式散弾銃。\\\\\"\",\"color\":\"gray\",\"italic\":false}']},CustomModelData:31,Charged:1b,ChuzData:{Ammo:0,AmmoUse:1,NoOffhand:true,ItemID:Craftsman_Shotgun,RawName:'{\"text\":\"Craftsman Shotgun\",\"color\":\"aqua\",\"italic\":false}'}}"
               }
             ]
           }
