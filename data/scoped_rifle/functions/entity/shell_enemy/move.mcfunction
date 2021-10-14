@@ -1,7 +1,7 @@
 
 # パーティクル
-    execute if entity @s[tag=!S.Rif_SharpBullet] run function scoped_rifle:entity/bullet/particle
-    execute if entity @s[tag=S.Rif_SharpBullet] run function scoped_rifle:entity/bullet/particle_sharp
+    particle minecraft:dust 1 0.5 0 0.4 ^ ^ ^ 0 0 0 0 1 force
+    particle minecraft:dust 1 0 0 0.2 ^ ^ ^ 0 0 0 0 1 force
 
 # 再帰カウントが0なら弾速からセット
     execute unless entity @s[scores={Chuz.Recursion=1..,Chuz.Range=1..}] run scoreboard players operation @s Chuz.Recursion = @s Chuz.Speed
@@ -17,13 +17,13 @@
     execute positioned ~-0.5 ~0.0 ~-0.5 positioned ~0.3 ~-0.1 ~0.3 if entity @e[dx=0,type=!#scoped_rifle:unhurtable,type=!ender_dragon,sort=nearest,limit=1] at @s positioned ~-0.5 ~-0.4 ~-0.5 positioned ~-0.3 ~-0.3 ~-0.3 if entity @e[dx=0,type=!#scoped_rifle:unhurtable,nbt={Invulnerable:0b},sort=nearest,limit=1] at @s run function scoped_rifle:entity/bullet/hit
 
 # 対ドラゴン
-    execute at @s at @e[type=minecraft:ender_dragon,team=!null,distance=..6,sort=nearest,limit=1] run function scoped_rifle:entity/bullet/hit
+#    execute at @s at @e[type=minecraft:ender_dragon,team=!null,distance=..6,sort=nearest,limit=1] run function scoped_rifle:entity/bullet/hit
 
 # 壁の衝突判定
     execute unless block ~ ~ ~ #scoped_rifle:no_collision run function scoped_rifle:entity/bullet/break
     
 # 再帰
-    execute if entity @s[scores={Chuz.Recursion=1..,Chuz.Range=1..}] at @s run function scoped_rifle:entity/bullet/move
+    execute if entity @s[scores={Chuz.Recursion=1..,Chuz.Range=1..}] at @s run function scoped_rifle:entity/shell_enemy/move
 
 # キル
     execute if entity @s[scores={Chuz.Range=0}] run kill @s

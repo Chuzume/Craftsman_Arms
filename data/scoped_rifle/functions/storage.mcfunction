@@ -12,6 +12,8 @@
 # ショットガン
     # メインハンドに入ってる時のメイン処理
         execute if data storage chuz:context Item.Mainhand.tag.ChuzData{ItemID:Craftsman_Shotgun} run function scoped_rifle:item/craftsman_shotgun/main
+    # リロード
+        execute if data storage chuz:context Item.Mainhand.tag.ChuzData{ItemID:Craftsman_Shotgun_Reload} run function scoped_rifle:item/craftsman_shotgun/reload/main
 
 # 共通処理
 # 手放すとリロードリセット
