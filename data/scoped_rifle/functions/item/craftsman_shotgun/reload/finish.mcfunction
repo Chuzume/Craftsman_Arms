@@ -21,10 +21,10 @@
     loot replace entity @s weapon.mainhand 1 mine 100001 0 100000 debug_stick
 
 # 演出
-    execute anchored eyes run particle crit ^-0.5 ^ ^0.5 0 0 0 0.2 5
-    playsound minecraft:block.iron_trapdoor.close player @a ~ ~ ~ 0.8 1
-    playsound minecraft:block.iron_door.open player @a ~ ~ ~ 0.6 1.1
-    playsound minecraft:block.piston.contract player @a ~ ~ ~ 0.8 2
+    execute at @s anchored eyes run particle crit ^-0.5 ^ ^0.5 0 0 0 0.2 5
+    execute at @s run playsound minecraft:block.iron_trapdoor.close player @a ~ ~ ~ 0.8 1
+    execute at @s run playsound minecraft:block.iron_door.open player @a ~ ~ ~ 0.6 1.1
+    execute at @s run playsound minecraft:block.piston.contract player @a ~ ~ ~ 0.8 2
 
 # リセット
     title @s[tag=!S.Rif_ReloadSucces] actionbar {"text":""}

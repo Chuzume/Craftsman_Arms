@@ -14,7 +14,7 @@
     execute if score @s S.Rif_Reload matches 15 run playsound minecraft:block.iron_door.close player @a ~ ~ ~ 1 2
     execute if score @s S.Rif_Reload matches 20 run playsound minecraft:block.stone_button.click_on player @a ~ ~ ~ 1 2
     execute if score @s S.Rif_Reload matches 21 run playsound minecraft:block.iron_door.close player @a ~ ~ ~ 1 2
-    execute if score @s S.Rif_Reload matches 30.. run function scoped_rifle:item/craftsman_shotgun/reload/finish
+    execute if score @s S.Rif_Reload matches 30.. in overworld run function scoped_rifle:item/craftsman_shotgun/reload/finish
 
 # ここがチャンス！
     execute if score @s[tag=!S.Rif_ReloadFailed] S.Rif_Reload matches 9..10 run title @s actionbar {"text":"| Just Reload |","color":"white"}
