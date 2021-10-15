@@ -27,7 +27,7 @@
     execute at @s run playsound minecraft:block.piston.contract player @a ~ ~ ~ 0.8 2
 
 # リセット
-    title @s[tag=!S.Rif_ReloadSucces] actionbar {"text":""}
+    title @s[tag=!S.Rif_ReloadSuccess] actionbar {"text":""}
     tag @s remove S.Rif_ReloadFailed
-    tag @s remove S.Rif_ReloadSucces
+    tag @s remove S.Rif_ReloadSuccess
     scoreboard players reset @s S.Rif_Reload

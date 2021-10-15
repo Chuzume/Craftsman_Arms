@@ -24,4 +24,4 @@
     execute unless score @s[tag=!S.Rif_ReloadFailed,scores={S.Rif_RClick=0..}] S.Rif_Reload matches 9..10 run function scoped_rifle:item/craftsman_shotgun/reload/justreload_failed
 
 # ジャストリロード
-    execute if score @s[tag=!S.Rif_ReloadFailed,scores={S.Rif_RClick=0..}] S.Rif_Reload matches 9..10 run function scoped_rifle:item/craftsman_shotgun/reload/justreload_succes
+    execute if score @s[tag=!S.Rif_ReloadFailed,scores={S.Rif_RClick=0..}] S.Rif_Reload matches 9..10 run function scoped_rifle:item/craftsman_shotgun/reload/justreload_success
