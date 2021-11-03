@@ -15,13 +15,13 @@
     execute if entity @s[scores={S.Rif_Charge=30}] run playsound minecraft:block.note_block.bell player @a ~ ~ ~ 1 1.5
     
 # 離して発砲
-    execute if score @s[scores={S.Rif_Sneak=0}] S.Rif_Charge matches 13..29 unless data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function scoped_rifle:item/craftsman_scoped_rifle/fire/charged
+    execute if score @s[scores={S.Rif_Sneak=0}] S.Rif_Charge matches 13..29 unless data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function scoped_rifle:item/scoped_rifle/fire/charged
 
 # シャープシュート
-    execute if score @s[scores={S.Rif_Sneak=0}] S.Rif_Charge matches 30.. unless data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function scoped_rifle:item/craftsman_scoped_rifle/fire/sharpshoot
+    execute if score @s[scores={S.Rif_Sneak=0}] S.Rif_Charge matches 30.. unless data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function scoped_rifle:item/scoped_rifle/fire/sharpshoot
 
 # 残弾0なら失敗
-    execute if score @s[scores={S.Rif_Sneak=0}] S.Rif_Charge matches 13.. if data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function scoped_rifle:item/craftsman_scoped_rifle/fire/out_of_ammo
+    execute if score @s[scores={S.Rif_Sneak=0}] S.Rif_Charge matches 13.. if data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function scoped_rifle:item/scoped_rifle/fire/out_of_ammo
 
 # 残弾0でエイムしてない場合はリロードをする
     execute if entity @s[tag=!Chuz.UsingSpyglass,scores={S.Rif_Sneak=0}] unless data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:4} run scoreboard players add @s S.Rif_Ready 1
@@ -30,14 +30,14 @@
     execute if data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:4} run scoreboard players reset @s S.Rif_Ready 
 
 # リロード準備が整ったら弾を込めだす
-    execute if score @s S.Rif_Ready matches 30.. run function scoped_rifle:item/craftsman_scoped_rifle/reloading
+    execute if score @s S.Rif_Ready matches 30.. run function scoped_rifle:item/scoped_rifle/reloading
 
 # チャージ値リセット
     execute unless score @s S.Rif_Sneak matches 1.. run scoreboard players reset @s S.Rif_Charge
 
 # スコープまたはスニークでリロードを中断
-    execute if predicate scoped_rifle:sneak run function scoped_rifle:item/craftsman_scoped_rifle/score_reset
-    execute if entity @s[tag=Chuz.UsingSpyglass] run function scoped_rifle:item/craftsman_scoped_rifle/score_reset
+    execute if predicate scoped_rifle:sneak run function scoped_rifle:item/scoped_rifle/score_reset
+    execute if entity @s[tag=Chuz.UsingSpyglass] run function scoped_rifle:item/scoped_rifle/score_reset
 
 # ズームタグリセット
     tag @s[tag=Chuz.UsingSpyglass] remove Chuz.UsingSpyglass

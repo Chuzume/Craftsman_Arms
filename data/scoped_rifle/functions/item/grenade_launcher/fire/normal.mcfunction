@@ -10,13 +10,13 @@
 
 # 弾を召喚
     execute anchored eyes run particle smoke ^-0.25 ^ ^0.7 0 0 0 0.05 10
-    function scoped_rifle:item/craftsman_shotgun/fire/fire
-    function scoped_rifle:item/craftsman_shotgun/fire/fire
-    function scoped_rifle:item/craftsman_shotgun/fire/fire
-    function scoped_rifle:item/craftsman_shotgun/fire/fire
-    function scoped_rifle:item/craftsman_shotgun/fire/fire
-    function scoped_rifle:item/craftsman_shotgun/fire/fire
-    function scoped_rifle:item/craftsman_shotgun/fire/fire
+    function scoped_rifle:item/shotgun/fire/fire
+    function scoped_rifle:item/shotgun/fire/fire
+    function scoped_rifle:item/shotgun/fire/fire
+    function scoped_rifle:item/shotgun/fire/fire
+    function scoped_rifle:item/shotgun/fire/fire
+    function scoped_rifle:item/shotgun/fire/fire
+    function scoped_rifle:item/shotgun/fire/fire
 
 # 弾が減る
     execute in overworld run function scoped_rifle:item/consume_ammo

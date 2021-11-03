@@ -3,11 +3,11 @@
     "unlock": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "scoped_rifle:craftsman_scoped_rifle"
+        "recipe": "scoped_rifle:scoped_rifle"
       }
     }
   },
   "rewards": {
-    "function": "scoped_rifle:craft/craftsman_scoped_rifle"
+    "function": "scoped_rifle:craft/scoped_rifle"
   }
 }
