@@ -5,7 +5,7 @@
     # どれくらい視点から離すか
         data modify storage forward_spreader: Distance set value 10f
     # どれくらい拡散させるか
-        data modify storage forward_spreader: Spread set value 2.0f
+        data modify storage forward_spreader: Spread set value 0.5f
 
 # 処理の実行
     execute at @s as @e[type=marker,tag=SpreadMarker,limit=1] run function forward_spreader:api/circle

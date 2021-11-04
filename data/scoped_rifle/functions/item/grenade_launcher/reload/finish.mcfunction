@@ -1,12 +1,12 @@
 
 # アイテム取得
-    loot replace entity @s weapon.mainhand loot scoped_rifle:item/craftsman_shotgun
+    loot replace entity @s weapon.mainhand loot scoped_rifle:item/craftsman_launcher
 
 # ルールが弾使うモードなら弾を減らす 消せた弾のぶんだけ$Ammoに代入
     execute if score $Chuz.Setting S.Rif_Rule1 matches 1 store result score $Ammo Chuz.Temporary run clear @s chain_command_block{ChuzData:{ItemID:Shotshell}} 2
         
 # ルールが弾使うモードじゃないなら常に2を代入
-    execute if score $Chuz.Setting S.Rif_Rule1 matches 0 run scoreboard players set $Ammo Chuz.Temporary 2
+    execute if score $Chuz.Setting S.Rif_Rule1 matches 0 run scoreboard players set $Ammo Chuz.Temporary 1
         
 # リセット
     scoreboard players reset @s Chuz.Temporary

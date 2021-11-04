@@ -8,6 +8,11 @@
     scoreboard objectives add S.Rif_Ready dummy
     scoreboard objectives add S.Rif_Rule1 dummy
 
+# Chuz.Vector0が存在しなければ召喚
+    forceload add 0 0 0 0
+    kill @e[type=area_effect_cloud,tag=Chuz.Vector0]
+    execute unless entity @e[type=area_effect_cloud,tag=Chuz.Vector0] run summon minecraft:area_effect_cloud 0 0 0 {Tags:["Chuz.Vector0"],Duration:-1,Age:-2147483648,WaitTime:-2147483648}
+    
 # チャンク読み込み
     forceload add 100000 100000
 
@@ -24,6 +29,14 @@
     scoreboard objectives add Chuz.Range dummy
     scoreboard objectives add Chuz.Speed dummy
     scoreboard objectives add Chuz.Recursion dummy
+
+# モーション関連
+    scoreboard objectives add Col_Check_X dummy
+    scoreboard objectives add Col_Check_Y dummy
+    scoreboard objectives add Col_Check_Z dummy
+    scoreboard objectives add Chuz.F.Check_X dummy
+    scoreboard objectives add Chuz.F.Check_Y dummy
+    scoreboard objectives add Chuz.F.Check_Z dummy
 
 # ダメージ受けたときのやつ
     scoreboard objectives add Chuz.HitCheck dummy

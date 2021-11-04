@@ -22,10 +22,6 @@
 # リロード準備が整ったら弾を込めだす
     execute if score @s S.Rif_Ready matches 30.. run function scoped_rifle:item/shotgun/reload/reloading
 
-# スコープまたはスニークでリロードを中断
-    execute if predicate scoped_rifle:sneak run function scoped_rifle:item/scoped_rifle/score_reset
-    execute if entity @s[tag=Chuz.UsingSpyglass] run function scoped_rifle:item/scoped_rifle/score_reset
-
 # リロード
     execute if data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function scoped_rifle:item/shotgun/reload/start
 

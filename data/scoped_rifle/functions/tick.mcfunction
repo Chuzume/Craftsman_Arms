@@ -3,7 +3,7 @@
     execute as @a at @s run function scoped_rifle:storage
 
 # 飛び道具チェック 
-    execute as @e[type=armor_stand,tag=S.Rif_Projectile] at @s run function scoped_rifle:entity/projectile_check
+    execute as @e[type=#scoped_rifle:projectile,tag=S.Rif_Projectile] at @s run function scoped_rifle:entity/projectile_check
 
 # スコアID
     execute as @a unless score @s Chuz_Pl.ID matches 0.. run function scoped_rifle:score_id

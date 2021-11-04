@@ -3,4 +3,5 @@
     execute at @s run function scoped_rifle:item/shotgun/fire/spread
 
 # 弾丸にInit処理
-    execute as @e[type=armor_stand,tag=S.Rif_Init,limit=1] at @s run function scoped_rifle:entity/shell/init
+    tag @e[type=armor_stand,tag=S.Rif_Init,limit=1] add S.Rif_Shell
+    execute as @e[type=armor_stand,tag=S.Rif_Init,limit=1] at @s run function scoped_rifle:entity/init
