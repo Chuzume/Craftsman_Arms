@@ -2,7 +2,7 @@ execute facing entity @e[type=marker,tag=S.Rif_Spread,distance=..100] feet run t
 kill @e[type=marker,tag=S.Rif_Spread,distance=..100]
 tag @s add S.Rif_Grenade
 tag @s remove S.Rif_Init
-scoreboard players set @s Chuz.Speed 10
+scoreboard players set @s Chuz.Range 60
 execute at @s run function scoped_rifle:entity/motion
 
 # UUIDコピー

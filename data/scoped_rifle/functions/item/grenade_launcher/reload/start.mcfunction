@@ -7,7 +7,6 @@
     item replace entity @s weapon.mainhand with warped_fungus_on_a_stick{display:{Name:'[{"text":"Craftsman Grenade Launcher","color":"aqua","italic":false},{"text":" | Reloading |","color":"gray","italic":false}]',Lore:['{"text":" "}','{"text":"[RClick: Just Reload]","color":"white","italic":false}','{"text":"[Ammo: Explosive Cartridge]","color":"white","italic":false}','{"text":" "}','{"text":"\\"おっきな弾を装填\\"","color":"gray","italic":false}']},HideFlags:4,Unbreakable:1b,CustomModelData:14,ChuzData:{NoOffhand:true,ItemID:Craftsman_Grenade_Launcher_Reload}} 1
 
 # 演出
-    execute anchored eyes run particle smoke ^-0.25 ^ ^0.7 0 0 0 0.05 10
     playsound minecraft:block.iron_trapdoor.close player @a ~ ~ ~ 0.8 1
     playsound minecraft:block.iron_door.open player @a ~ ~ ~ 0.6 1.1
     playsound minecraft:block.piston.contract player @a ~ ~ ~ 0.8 2

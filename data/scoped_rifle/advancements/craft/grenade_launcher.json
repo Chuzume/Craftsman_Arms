@@ -1,0 +1,13 @@
+{
+  "criteria": {
+    "unlock": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "scoped_rifle:grenade_launcher"
+      }
+    }
+  },
+  "rewards": {
+    "function": "scoped_rifle:craft/grenade_launcher"
+  }
+}
