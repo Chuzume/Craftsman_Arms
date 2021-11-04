@@ -6,7 +6,6 @@
     scoreboard objectives add S.Rif_Charge dummy
     scoreboard objectives add S.Rif_Reload dummy
     scoreboard objectives add S.Rif_Ready dummy
-    scoreboard objectives add S.Rif_Rule1 dummy
 
 # Chuz.Vector0が存在しなければ召喚
     forceload add 0 0 0 0
@@ -24,6 +23,7 @@
     scoreboard objectives add Chuz.Temporary dummy
     scoreboard objectives add Col_Check_Temp dummy
     scoreboard objectives add Chuz.Calc dummy
+    scoreboard objectives add Chuz.Rule dummy
 
 # 飛び道具の弾速
     scoreboard objectives add Chuz.Range dummy
@@ -52,6 +52,6 @@
     team modify No_Collision collisionRule never
 
 # ルールが存在してなかったら定義
-    execute unless score $Chuz.Setting S.Rif_Rule1 = $Chuz.Setting S.Rif_Rule1 run scoreboard players set $Chuz.Setting S.Rif_Rule1 1
+    execute unless score $S.Rif_Setting1 Chuz.Rule = $S.Rif_Setting1 Chuz.Rule run scoreboard players set $S.Rif_Setting1 Chuz.Rule 1
 
 # やぶ台のレシピ
