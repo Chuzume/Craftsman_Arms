@@ -53,5 +53,6 @@
 
 # ルールが存在してなかったら定義
     execute unless score $S.Rif_Setting1 Chuz.Rule = $S.Rif_Setting1 Chuz.Rule run scoreboard players set $S.Rif_Setting1 Chuz.Rule 1
+    execute unless score $S.Rif_Setting2 Chuz.Rule = $S.Rif_Setting2 Chuz.Rule run scoreboard players set $S.Rif_Setting2 Chuz.Rule 0
 
 # やぶ台のレシピ
