@@ -9,3 +9,6 @@
 # キル
     scoreboard players remove @s Chuz.Range 1
     execute if entity @s[scores={Chuz.Range=0}] run function scoped_rifle:entity/grenade/explode
+
+# 起爆アラート
+    #execute if entity @s[scores={Chuz.Range=..50}] if entity @a[distance=..4] run function scoped_rifle:entity/grenade/alert
