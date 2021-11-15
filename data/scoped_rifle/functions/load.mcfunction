@@ -5,6 +5,9 @@
     scoreboard objectives add S.Rif_Charge dummy
     scoreboard objectives add S.Rif_Reload dummy
     scoreboard objectives add S.Rif_Ready dummy
+    scoreboard objectives add S.Rif_Recursive dummy
+    scoreboard objectives add S.Rif_Remove dummy
+    scoreboard objectives add S.Rif_Burst dummy
 
 # Chuz.Vector0が存在しなければ召喚
     forceload add 0 0 0 0
@@ -53,5 +56,3 @@
 # ルールが存在してなかったら定義
     execute unless score $S.Rif_Setting1 Chuz.Rule = $S.Rif_Setting1 Chuz.Rule run scoreboard players set $S.Rif_Setting1 Chuz.Rule 1
     execute unless score $S.Rif_Setting2 Chuz.Rule = $S.Rif_Setting2 Chuz.Rule run scoreboard players set $S.Rif_Setting2 Chuz.Rule 0
-
-# やぶ台のレシピ

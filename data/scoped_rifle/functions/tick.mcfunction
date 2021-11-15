@@ -5,6 +5,9 @@
 # 飛び道具チェック 
     execute as @e[type=#scoped_rifle:projectile,tag=S.Rif_Projectile] at @s run function scoped_rifle:entity/projectile_check
 
+# スライムを消す
+    execute as @e[type=slime,tag=S.Rif_Slime] at @s run function scoped_rifle:entity/col_slime/main
+
 # スコアID
     execute as @a unless score @s Chuz_Pl.ID matches 0.. run function scoped_rifle:score_id
 
