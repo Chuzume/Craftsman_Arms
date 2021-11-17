@@ -24,8 +24,6 @@
         execute if data storage chuz:context Item.Mainhand.tag.ChuzData{ItemID:Craftsman_Gunblade,ItemMode:Ranged} run function scoped_rifle:item/gunblade/ranged/main
     # 剣モード
         execute if data storage chuz:context Item.Mainhand.tag.ChuzData{ItemID:Craftsman_Gunblade,ItemMode:Melee} run function scoped_rifle:item/gunblade/melee/main
-    # パリィ
-        #execute if data storage chuz:context Item.Mainhand.tag.ChuzData{ItemID:Craftsman_Gunblade,ItemMode:Parry} run function scoped_rifle:item/gunblade/main_parry
     # オフハンドに入れると変形する
         execute if data storage chuz:context Item.Offhand.tag.ChuzData{ItemID:Craftsman_Gunblade} in overworld run function scoped_rifle:item/gunblade/switch
 

@@ -9,4 +9,7 @@
 # ざくざくと弾を込める
     execute if score @s S.Rif_Reload matches 1 run playsound minecraft:block.piston.extend player @a ~ ~ ~ 1 2
     execute if score @s S.Rif_Reload matches 3.. run playsound minecraft:block.iron_door.close player @a ~ ~ ~ 1 2
-    execute if score @s S.Rif_Reload matches 3.. in overworld run function scoped_rifle:item/shotgun/add_ammo
+    # ルールが弾使うモードなら弾を減らす
+        execute if score @s S.Rif_Reload matches 3.. if score $S.Rif_Setting1 Chuz.Rule matches 1 run clear @s chain_command_block{ChuzData:{ItemID:Shotshell}} 1
+    # 弾を増やす
+        execute if score @s S.Rif_Reload matches 3.. in overworld run function scoped_rifle:item/add_ammo

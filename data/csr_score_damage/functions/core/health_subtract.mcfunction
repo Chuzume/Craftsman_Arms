@@ -53,3 +53,4 @@
 # 何から攻撃されたかリセット
     tag @s remove S.Rif_Hit.Bullet
     tag @s remove S.Rif_Hit.BulletHS
+    tag @s remove S.Rif_Hit.ChargeSmash
