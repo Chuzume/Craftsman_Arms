@@ -11,10 +11,13 @@
 # スコアID
     execute as @a unless score @s Chuz_Pl.ID matches 0.. run function scoped_rifle:score_id
 
+# UUIDヒット後のリアクション
+    execute as @e[type=!#scoped_rifle:unhurtable,tag=Chuz.HitReact,nbt=!{HurtTime:0s}] at @s run function scoped_rifle:hitreact 
+
 # 敵キャラテスト
     execute as @e[type=pillager,tag=S.Rif_Shotgunner] at @s run function scoped_rifle:entity/shotgun_pillager/main
 
 # リセット
-    scoreboard players set @a[scores={S.Rif_Sneak=1..}] S.Rif_Sneak 0
+    scoreboard players reset @a[scores={S.Rif_Sneak=1..}] S.Rif_Sneak
     scoreboard players reset @a[scores={S.Rif_Shot=1..}] S.Rif_Shot
     scoreboard players reset @a[scores={S.Rif_RClick=1..}] S.Rif_RClick

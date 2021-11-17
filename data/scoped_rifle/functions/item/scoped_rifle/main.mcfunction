@@ -16,13 +16,13 @@
     execute if entity @s[scores={S.Rif_Charge=30}] run playsound minecraft:block.note_block.bell player @a ~ ~ ~ 1 1.5
     
 # 離して発砲
-    execute if score @s[scores={S.Rif_Sneak=0}] S.Rif_Charge matches 13..29 unless data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function scoped_rifle:item/scoped_rifle/fire/charged
+    execute unless score @s[scores={S.Rif_Charge=13..29}] S.Rif_Sneak matches 0.. unless data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function scoped_rifle:item/scoped_rifle/fire/charged
 
 # シャープシュート
-    execute if score @s[scores={S.Rif_Sneak=0}] S.Rif_Charge matches 30.. unless data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function scoped_rifle:item/scoped_rifle/fire/sharpshoot
+    execute unless score @s[scores={S.Rif_Charge=30..}] S.Rif_Sneak matches 0.. unless data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function scoped_rifle:item/scoped_rifle/fire/sharpshoot
 
 # 残弾0なら失敗
-    execute if score @s[scores={S.Rif_Sneak=0}] S.Rif_Charge matches 13.. if data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function scoped_rifle:item/scoped_rifle/fire/out_of_ammo
+   execute unless score @s[scores={S.Rif_Charge=13..}] S.Rif_Sneak matches 0.. if data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function scoped_rifle:item/scoped_rifle/fire/out_of_ammo
 
 # 残弾0でエイムしてない場合はリロードをする
     execute if entity @s[tag=!Chuz.UsingSpyglass,scores={S.Rif_Sneak=0}] unless data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:4} run scoreboard players add @s S.Rif_Ready 1

@@ -2,13 +2,9 @@
 # 対象スロットの残り使用回数取得
     execute store result score $Ammo Chuz.Temporary run data get storage chuz:context Item.Mainhand.tag.ChuzData.Ammo
 
-# リセット
-    scoreboard players reset @s Chuz.Temporary
-
 # 減算
     execute store result score $AmmoUse Chuz.Temporary run data get entity @s SelectedItem.tag.ChuzData.AmmoUse
     scoreboard players operation $Ammo Chuz.Temporary -= $AmmoUse Chuz.Temporary
-    #scoreboard players remove $Ammo Chuz.Temporary 1
 
 # 置き換え
     data modify storage chuz:context Item set from entity @s SelectedItem

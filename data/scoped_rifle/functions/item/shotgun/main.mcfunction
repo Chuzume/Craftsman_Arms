@@ -18,7 +18,6 @@
 
 # 弾がマックスになったらおしまい
     execute if data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:2} run scoreboard players reset @s S.Rif_Ready 
-    execute if score @s S.Rif_Pump matches 0.. run scoreboard players reset @s S.Rif_Ready
 # リロード準備が整ったら弾を込めだす
     execute if score @s S.Rif_Ready matches 30.. run function scoped_rifle:item/shotgun/reload/reloading
 

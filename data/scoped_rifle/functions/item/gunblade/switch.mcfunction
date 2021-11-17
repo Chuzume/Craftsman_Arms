@@ -1,8 +1,8 @@
 
 # 音
-    playsound minecraft:entity.witch.throw player @a ~ ~ ~ 1 0.7
-    playsound minecraft:block.iron_door.open player @a ~ ~ ~ 1 1.5
-    playsound minecraft:block.iron_trapdoor.close player @a ~ ~ ~ 1 1
+    execute at @s run playsound minecraft:entity.witch.throw player @a ~ ~ ~ 1 0.7
+    execute at @s run playsound minecraft:block.iron_door.open player @a ~ ~ ~ 1 1.5
+    execute at @s run playsound minecraft:block.iron_trapdoor.close player @a ~ ~ ~ 1 1
 
 # 現状はオフハンドに入れると戻ってくる
     data remove storage chuz:context Item
@@ -27,4 +27,5 @@
     execute if data storage chuz:context Item.Offhand.tag.ChuzData{ItemID:Craftsman_Gunblade,ItemMode:Melee} run loot replace entity @s weapon.mainhand loot scoped_rifle:item/gunblade/ranged
 
 # 装填数更新
-    execute in overworld run function scoped_rifle:item/replaceitem
+    function scoped_rifle:item/replaceitem
+    tag @s add S.Rif_Hold

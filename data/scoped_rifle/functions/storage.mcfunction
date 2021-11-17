@@ -20,14 +20,14 @@
         execute if data storage chuz:context Item.Mainhand.tag.ChuzData{ItemID:Craftsman_Grenade_Launcher_Reload} run function scoped_rifle:item/grenade_launcher/reload/main
 
 # ガンブレード
-    # 剣モード
-        execute if data storage chuz:context Item.Mainhand.tag.ChuzData{ItemID:Craftsman_Gunblade,ItemMode:Ranged} run function scoped_rifle:item/gunblade/main_ranged
     # 銃モード
-        execute if data storage chuz:context Item.Mainhand.tag.ChuzData{ItemID:Craftsman_Gunblade,ItemMode:Melee} run function scoped_rifle:item/gunblade/main_melee
+        execute if data storage chuz:context Item.Mainhand.tag.ChuzData{ItemID:Craftsman_Gunblade,ItemMode:Ranged} run function scoped_rifle:item/gunblade/ranged/main
+    # 剣モード
+        execute if data storage chuz:context Item.Mainhand.tag.ChuzData{ItemID:Craftsman_Gunblade,ItemMode:Melee} run function scoped_rifle:item/gunblade/melee/main
     # パリィ
-        execute if data storage chuz:context Item.Mainhand.tag.ChuzData{ItemID:Craftsman_Gunblade,ItemMode:Parry} run function scoped_rifle:item/gunblade/main_parry
+        #execute if data storage chuz:context Item.Mainhand.tag.ChuzData{ItemID:Craftsman_Gunblade,ItemMode:Parry} run function scoped_rifle:item/gunblade/main_parry
     # オフハンドに入れると変形する
-        execute if data storage chuz:context Item.Offhand.tag.ChuzData{ItemID:Craftsman_Gunblade} run function scoped_rifle:item/gunblade/switch
+        execute if data storage chuz:context Item.Offhand.tag.ChuzData{ItemID:Craftsman_Gunblade} in overworld run function scoped_rifle:item/gunblade/switch
 
 # 共通処理
     # 手放すとリロードリセット

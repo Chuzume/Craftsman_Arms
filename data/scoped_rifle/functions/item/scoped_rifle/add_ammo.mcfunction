@@ -3,19 +3,19 @@
     execute if score $S.Rif_Setting1 Chuz.Rule matches 1 run clear @s chain_command_block{ChuzData:{ItemID:Heavy_Bullet}} 1
 
 # 対象スロットの残り使用回数取得
-    execute store result score $Ammo Chuz.Temporary run data get storage chuz:context Item.Mainhand.tag.ChuzData.Ammo
+    execute store result score $AmmoReload Chuz.Temporary run data get storage chuz:context Item.Mainhand.tag.ChuzData.Ammo
 
 # リセット
     scoreboard players reset @s Chuz.Temporary
 
 # 加算
     scoreboard players set $AmmoAdd Chuz.Temporary 1
-    scoreboard players operation $Ammo Chuz.Temporary += $AmmoAdd Chuz.Temporary
+    scoreboard players operation $AmmoReload Chuz.Temporary += $AmmoAdd Chuz.Temporary
 
 # 置き換え
     data modify storage chuz:context Item set from entity @s SelectedItem
     data modify storage chuz:context Item.tag.display.Name set from block 100001 0 100000 Items[0].tag.display.Name
-    execute store result storage chuz:context Item.tag.ChuzData.Ammo int 1 run scoreboard players get $Ammo Chuz.Temporary
+    execute store result storage chuz:context Item.tag.ChuzData.Ammo int 1 run scoreboard players get $AmmoReload Chuz.Temporary
     loot replace block 100001 0 100000 container.0 loot scoped_rifle:set_ammo
     data modify block 100001 0 100000 Items set value []
     data modify block 100001 0 100000 Items append from storage chuz:context Item

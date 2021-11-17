@@ -12,7 +12,7 @@
     # 腰だめ
         execute if entity @s[tag=!Chuz.UsingSpyglass] anchored eyes run particle smoke ^-0.25 ^ ^0.7 0 0 0 0.05 5
         execute if entity @s[tag=!Chuz.UsingSpyglass] anchored eyes run summon armor_stand ^-0.25 ^ ^ {Silent:1b,Marker:1b,Invisible:1b,Tags:["S.Rif_Projectile","Chuz_UUIDAttack","S.Rif_Init"],ArmorItems:[{id:"minecraft:structure_void",Count:1b,tag:{ChuzData:{Damage:6.0,HeadDamage:2.0,Speed:60,Range:400}}},{},{},{}]}
-        execute if entity @s[tag=!Chuz.UsingSpyglass] as @p[tag=Chuz.This] at @s run function scoped_rifle:item/gunblade/fire/spread
+        execute if entity @s[tag=!Chuz.UsingSpyglass] as @p[tag=Chuz.This] at @s run function scoped_rifle:item/gunblade/ranged/fire/spread
 
 # 弾丸にInit処理
     tag @e[type=armor_stand,tag=S.Rif_Init,limit=1] add S.Rif_SnipeBullet

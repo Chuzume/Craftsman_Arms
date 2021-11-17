@@ -8,5 +8,5 @@
 
 # ざくざくと弾を込める
     execute if score @s S.Rif_Reload matches 1 run playsound minecraft:block.piston.extend player @a ~ ~ ~ 1 2
-    execute if score @s S.Rif_Reload matches 3 run playsound minecraft:block.iron_door.close player @a ~ ~ ~ 1 2
-    execute if score @s S.Rif_Reload matches 3 in overworld run function scoped_rifle:item/shotgun/add_ammo
+    execute if score @s S.Rif_Reload matches 3.. run playsound minecraft:block.iron_door.close player @a ~ ~ ~ 1 2
+    execute if score @s S.Rif_Reload matches 3.. in overworld run function scoped_rifle:item/shotgun/add_ammo
