@@ -1,0 +1,13 @@
+{
+  "criteria": {
+    "unlock": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "scoped_rifle:gunblade"
+      }
+    }
+  },
+  "rewards": {
+    "function": "scoped_rifle:craft/gunblade"
+  }
+}

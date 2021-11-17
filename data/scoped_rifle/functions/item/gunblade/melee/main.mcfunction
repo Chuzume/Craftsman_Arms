@@ -15,10 +15,14 @@
 # チャージ
     execute if score @s S.Rif_Sneak matches 1.. run function scoped_rifle:item/gunblade/charge
     # チャージスマッシュ
-        execute if score @s[scores={S.Rif_RClick=0..}] S.Rif_Charge matches 40.. run function scoped_rifle:item/gunblade/melee/charge_smash/main
+        execute if score @s[scores={S.Rif_RClick=0..}] S.Rif_Charge matches 30.. unless data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function scoped_rifle:item/gunblade/melee/charge_smash/main
+    # 弾切れ
+        execute if score @s[scores={S.Rif_RClick=0..}] S.Rif_Charge matches 30.. if data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function scoped_rifle:item/shotgun/fire/out_of_ammo
+
+
 
 # 残弾0でエイムしてない場合はリロードをする
-    execute unless data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:8} unless score @s S.Rif_Sneak matches 1.. run scoreboard players add @s S.Rif_Ready 1
+    execute unless data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:8} unless score @s S.Rif_Sneak matches 0.. run scoreboard players add @s S.Rif_Ready 1
 
 # 弾がマックスになったらおしまい
     execute if data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:8} run scoreboard players reset @s S.Rif_Ready 

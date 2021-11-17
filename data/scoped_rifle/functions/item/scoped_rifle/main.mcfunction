@@ -25,7 +25,7 @@
    execute unless score @s[scores={S.Rif_Charge=13..}] S.Rif_Sneak matches 0.. if data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function scoped_rifle:item/scoped_rifle/fire/out_of_ammo
 
 # 残弾0でエイムしてない場合はリロードをする
-    execute if entity @s[tag=!Chuz.UsingSpyglass,scores={S.Rif_Sneak=0}] unless data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:4} run scoreboard players add @s S.Rif_Ready 1
+    execute unless score @s[tag=!Chuz.UsingSpyglass] S.Rif_Sneak matches 0.. unless data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:4} run scoreboard players add @s S.Rif_Ready 1
 
 # 弾がマックスになったらおしまい
     execute if data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:4} run scoreboard players reset @s S.Rif_Ready 

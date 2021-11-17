@@ -1,4 +1,4 @@
-execute facing entity @e[type=marker,tag=S.Rif_Spread,distance=..100] feet run tp @s ~ ~-0.3 ~ ~ ~
+execute facing entity @e[type=marker,tag=S.Rif_Spread,distance=..100] feet run tp @s ~ ~ ~ ~ ~
 kill @e[type=marker,tag=S.Rif_Spread,distance=..100]
 tag @s add S.Rif_Shell
 tag @s remove S.Rif_Init

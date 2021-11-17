@@ -21,7 +21,7 @@
 
 # 弾丸にInit処理
     tag @e[type=armor_stand,tag=S.Rif_Init,limit=1] add S.Rif_SnipeBullet
-    execute as @e[type=armor_stand,tag=S.Rif_Init,limit=1] at @s run function scoped_rifle:entity/init
+    execute as @e[type=armor_stand,tag=S.Rif_Init,limit=1] at @s run function scoped_rifle:entity/bullet/init
 
 # 弾が減る
     execute in overworld run function scoped_rifle:item/consume_ammo

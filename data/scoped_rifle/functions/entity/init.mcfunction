@@ -1,4 +1,4 @@
-execute facing entity @e[type=marker,tag=S.Rif_Spread,distance=..100] feet run tp @s ~ ~-0.3 ~ ~ ~
+execute facing entity @e[type=marker,tag=S.Rif_Spread,distance=..100] feet run tp @s ~ ~-0.15 ~ ~ ~
 kill @e[type=marker,tag=S.Rif_Spread,distance=..100]
 tag @s remove S.Rif_Init
 execute store result score @s Chuz.Speed run data get entity @s ArmorItems[0].tag.ChuzData.Speed

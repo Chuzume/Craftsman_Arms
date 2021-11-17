@@ -5,7 +5,9 @@
 
 # 煙
     # 腰だめ
-        execute if entity @s[tag=!Chuz.UsingSpyglass] anchored eyes run particle smoke ^-0.25 ^ ^0.7 0 0 0 0.05 5
+        execute anchored eyes run particle smoke ^-0.25 ^ ^0.7 0 0 0 0.05 5
 
-    # スコープ！
-        execute if entity @s[tag=Chuz.UsingSpyglass] anchored eyes run particle smoke ^ ^ ^0.7 0 0 0 0.05 2
+# リセット
+    scoreboard players reset @s S.Rif_Charge
+    scoreboard players remove @s S.Rif_Burst 1
+    tag @s remove Chuz.This
