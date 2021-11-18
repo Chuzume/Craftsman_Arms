@@ -13,7 +13,6 @@
 
 # 置き換え
     data modify storage chuz:context Item.Mainhand set from entity @s SelectedItem
-    data modify storage chuz:context Item.Mainhand.tag.display.Name set from block 100001 0 100000 Items[0].tag.display.Name
     execute store result storage chuz:context Item.Mainhand.tag.ChuzData.Ammo int 1 run scoreboard players get $Ammo Chuz.Temporary
     loot replace block 100001 0 100000 container.0 loot scoped_rifle:set_ammo
     data modify block 100001 0 100000 Items set value []

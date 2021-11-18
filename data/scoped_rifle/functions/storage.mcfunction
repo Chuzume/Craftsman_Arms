@@ -33,7 +33,7 @@
         tag @s[tag=S.Rif_Hold] remove S.Rif_Hold
     # 手放すとチャージリセット
         execute unless entity @s[tag=S.Rif_Charge] run scoreboard players reset @s S.Rif_Charge
-        tag @s[tag=S.Rif_Charge] remove S.Rif_Chargea
+        tag @s[tag=S.Rif_Charge] remove S.Rif_Charge
     # オフハンドに入れると戻ってくる
         execute if data storage chuz:context Item.Offhand.tag.ChuzData{NoOffhand:true} run function scoped_rifle:item/no_offhand
 
