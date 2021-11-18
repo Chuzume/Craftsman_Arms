@@ -12,7 +12,7 @@
 
 # 落下速度リセットしてAECで打ち上げる
     tp @s @s
-    summon minecraft:area_effect_cloud ~ ~ ~ {Duration:6,Age:4,Effects:[{Id:25b,Amplifier:20b,Duration:3,ShowParticles:0b},{Id:28b,Amplifier:0b,Duration:10,ShowParticles:0b}]}
+    summon minecraft:area_effect_cloud ~ ~ ~ {Duration:6,DurationOnUse:0,Age:4,Effects:[{Id:25b,Amplifier:20b,Duration:3,ShowParticles:0b},{Id:28b,Amplifier:0b,Duration:10,ShowParticles:0b}]}
 
 # 数を指定して当たり判定用のスライムをぶつける
     scoreboard players set @s S.Rif_Recursive 20

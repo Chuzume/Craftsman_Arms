@@ -10,7 +10,7 @@
     playsound minecraft:entity.player.attack.strong neutral @a ~ ~ ~ 1.5 1
 
 # ダメージを設定
-    data merge storage csr_score_damage: {Damage:10.0}
+    data merge storage csr_score_damage: {Damage:14.0}
     execute if entity @s[type=!end_crystal] run function csr_score_damage:api/attack
 
 # デバフ

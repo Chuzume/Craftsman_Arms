@@ -4,7 +4,7 @@
     tag @s add S.Rif_Charge
 
 # ステップ
-    execute unless score @s[scores={S.Rif_RClick=0..}] S.Rif_Sneak matches 0.. if entity @s[nbt={OnGround:1b}] unless data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function scoped_rifle:item/gunblade/melee/step/main
+    execute unless score @s[scores={S.Rif_RClick=0..}] S.Rif_Sneak matches 0.. if entity @s[nbt={OnGround:1b}] run function scoped_rifle:item/gunblade/melee/step/main
     # ステップパーティクル
         execute if entity @s[tag=S.Rif_Steping] run function scoped_rifle:item/gunblade/melee/step/particle
     # 着地で解除

@@ -12,9 +12,14 @@
 
 # パーティクル
     execute anchored eyes rotated ~ ~90 positioned ^ ^2 ^ run function scoped_rifle:item/gunblade/melee/charge_smash/shape
+    execute anchored eyes rotated ~ ~90 positioned ^ ^4 ^ run function scoped_rifle:item/gunblade/melee/charge_smash/shape
+    execute anchored eyes rotated ~ ~90 positioned ^ ^6 ^ run function scoped_rifle:item/gunblade/melee/charge_smash/shape
 
 # 火薬パワーでなんか吹っ飛ばす
-    execute positioned ^ ^ ^2 as @e[type=!#scoped_rifle:unhurtable,tag=!Chuz.This,nbt=!{Invulnerable:1b},distance=..2] at @s rotated 0 ~ facing entity @p[tag=Chuz.This] feet run function scoped_rifle:item/gunblade/melee/charge_smash/hit
+    execute positioned ^ ^ ^2.5 as @e[type=!#scoped_rifle:unhurtable,tag=!Chuz.This,nbt=!{Invulnerable:1b},distance=..2] at @s facing entity @p[tag=Chuz.This] feet run function scoped_rifle:item/gunblade/melee/charge_smash/hit
+    execute positioned ^ ^ ^6 as @e[type=!#scoped_rifle:unhurtable,tag=!Chuz.This,nbt=!{Invulnerable:1b},distance=..2] at @s facing entity @p[tag=Chuz.This] feet run function scoped_rifle:item/gunblade/melee/charge_smash/hit
+    #execute positioned ^ ^ ^2.5 as @e[tag=Test,distance=..2] at @s facing entity @p[tag=Chuz.This] feet run say Hit
+    #execute positioned ^ ^ ^6 as @e[tag=Test,distance=..2] at @s facing entity @p[tag=Chuz.This] feet run say Hit2
 
 # リセットと残弾消費
     execute in overworld run function scoped_rifle:item/consume_ammo
