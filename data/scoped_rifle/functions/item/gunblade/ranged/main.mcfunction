@@ -4,7 +4,7 @@
     tag @s add S.Rif_Charge
 
 # 発砲
-    execute unless score @s[scores={S.Rif_Shot=0..}] S.Rif_Sneak matches 0.. unless data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function scoped_rifle:item/gunblade/ranged/fire/normal
+    execute unless score @s[scores={S.Rif_Shot=0..}] S.Rif_Charge matches 30.. unless data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function scoped_rifle:item/gunblade/ranged/fire/normal
     # 残弾0なら失敗
         execute if entity @s[scores={S.Rif_Shot=0..}] if data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function scoped_rifle:item/shotgun/fire/out_of_ammo
 

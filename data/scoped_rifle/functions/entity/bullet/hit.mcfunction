@@ -3,8 +3,9 @@
     execute store success score @s Chuz.HitCheck if score @s Chuz_En.ID = @e[type=!#scoped_rifle:unhurtable,sort=nearest,limit=1] Chuz_Pl.ID
 
 # ヒット
-    execute store result storage csr_score_damage: Damage int 1 run data get entity @s ArmorItems[0].tag.ChuzData.Damage
-    execute store result storage csr_score_damage: HeadDamage int 1 run data get entity @s ArmorItems[0].tag.ChuzData.HeadDamage
+    execute store result storage csr_score_damage: ChuzDamage.Body int 1 run data get entity @s ArmorItems[0].tag.ChuzData.BodyDamage
+    execute store result storage csr_score_damage: ChuzDamage.Head int 1 run data get entity @s ArmorItems[0].tag.ChuzData.HeadDamage
+
     execute if score @s Chuz.HitCheck matches 0 as @e[type=!#scoped_rifle:unhurtable,sort=nearest,limit=1] at @s unless entity @s[gamemode=!adventure,gamemode=!survival] run function scoped_rifle:entity/bullet/hit_damage
 
 # 消失
