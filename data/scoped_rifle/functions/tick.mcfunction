@@ -18,6 +18,6 @@
     execute as @e[type=pillager,tag=S.Rif_Shotgunner] at @s run function scoped_rifle:entity/shotgun_pillager/main
 
 # リセット
-    scoreboard players reset @a[scores={S.Rif_Sneak=1..}] S.Rif_Sneak
+    scoreboard players reset @a[scores={S.Rif_Sneak=0..}] S.Rif_Sneak
     scoreboard players reset @a[scores={S.Rif_Shot=1..}] S.Rif_Shot
-    scoreboard players reset @a[scores={S.Rif_RClick=1..}] S.Rif_RClick
+    scoreboard players reset @a[scores={S.Rif_RClick=0..}] S.Rif_RClick
