@@ -2,7 +2,7 @@
     tag @s add Chuz.This
     
 # 発砲
-    playsound minecraft:entity.firework_rocket.blast player @a ~ ~ ~ 3 0.5
+    playsound minecraft:entity.firework_rocket.blast player @a ~ ~ ~ 4 0.5
     playsound minecraft:entity.shulker.shoot player @a ~ ~ ~ 3 2
     playsound minecraft:entity.blaze.hurt player @a ~ ~ ~ 2 1.5
     playsound chuzume:sniper_shot player @a ~ ~ ~ 4 0.8

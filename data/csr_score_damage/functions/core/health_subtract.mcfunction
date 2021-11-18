@@ -50,6 +50,7 @@
     scoreboard players reset $SubtractedHealth ScoreDamageCore
     scoreboard players reset $hasDependency
 
+
 # 何から攻撃されたかリセット
     tag @s remove S.Rif_Hit.Bullet
     tag @s remove S.Rif_Hit.BulletHS

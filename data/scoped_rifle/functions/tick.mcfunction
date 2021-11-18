@@ -12,7 +12,7 @@
     execute as @a unless score @s Chuz_Pl.ID matches 0.. run function scoped_rifle:score_id
 
 # UUIDヒット後のリアクション
-    execute as @e[type=!#scoped_rifle:unhurtable,tag=Chuz.HitReact,nbt=!{HurtTime:0s}] at @s run function scoped_rifle:hitreact 
+    execute as @e[type=!#scoped_rifle:unhurtable,tag=Chuz.HitReact,nbt={HurtTime:10s}] at @s run function scoped_rifle:hitreact 
 
 # 敵キャラテスト
     execute as @e[type=pillager,tag=S.Rif_Shotgunner] at @s run function scoped_rifle:entity/shotgun_pillager/main

@@ -3,15 +3,10 @@
     tag @s add S.Rif_Hold
     tag @s add S.Rif_Charge
 
-# ステップアタック
-        #execute if score @s[tag=!S.Rif_NoStepAttack,tag=S.Rif_Steping,nbt={OnGround:0b}] S.Rif_RClick matches 0.. unless data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function scoped_rifle:item/gunblade/melee/stepattack
-    # 弾切れステップアタック
-        #execute if score @s[tag=!S.Rif_NoStepAttack,tag=S.Rif_Steping,nbt={OnGround:0b}] S.Rif_RClick matches 0.. if data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function scoped_rifle:item/shotgun/fire/out_of_ammo
-
 # ステップ
-    execute unless score @s[scores={S.Rif_RClick=0..}] S.Rif_Sneak matches 0.. if entity @s[nbt={OnGround:1b}] unless data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function scoped_rifle:item/gunblade/melee/bulletstep
+    execute unless score @s[scores={S.Rif_RClick=0..}] S.Rif_Sneak matches 0.. if entity @s[nbt={OnGround:1b}] unless data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function scoped_rifle:item/gunblade/melee/step/main
     # ステップパーティクル
-        execute if entity @s[tag=S.Rif_Steping] run function scoped_rifle:item/gunblade/melee/step_particle
+        execute if entity @s[tag=S.Rif_Steping] run function scoped_rifle:item/gunblade/melee/step/particle
     # 着地で解除
         execute if entity @s[tag=S.Rif_Steping,nbt={OnGround:1b}] unless entity @s[scores={S.Rif_RClick=1..}] run function scoped_rifle:item/gunblade/melee/landing
 

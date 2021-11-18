@@ -21,6 +21,9 @@
 # 弾が減る
     #execute in overworld run function scoped_rifle:item/consume_ammo
 
+# 腹が減る
+    effect give @s[gamemode=!creative] minecraft:hunger 1 70 true
+
 # リセット
     scoreboard players reset @s S.Rif_Ready
     scoreboard players reset @s S.Rif_Reload
