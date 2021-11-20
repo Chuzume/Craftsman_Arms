@@ -5,6 +5,6 @@
     }
   },
   "rewards": {
-    "function": "craftsman_arms:install/check"
+    "function": "craftsman_arms:install_check"
   }
 }
