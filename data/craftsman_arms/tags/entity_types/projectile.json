@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "minecraft:armor_stand",
+    "minecraft:marker",
     "minecraft:item",
     "minecraft:arrow",
     "minecraft:spectral_arrow",
