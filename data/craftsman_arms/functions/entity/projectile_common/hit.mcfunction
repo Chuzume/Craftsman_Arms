@@ -10,5 +10,3 @@
 
 # 消失
     execute if score @s Chuz.HitCheck matches 0 run function craftsman_arms:entity/projectile_common/break
-
-say @e[type=!#craftsman_arms:unhurtable,dx=0,sort=nearest,limit=1]
