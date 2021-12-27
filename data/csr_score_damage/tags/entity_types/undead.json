@@ -13,6 +13,8 @@
         "minecraft:wither",
         "minecraft:skeleton_horse",
         "minecraft:zombie_horse",
-        "minecraft:zoglin"
+        "minecraft:zoglin",
+        {"id": "hogehoge","required": false}
+
     ]
 }
