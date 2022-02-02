@@ -1,3 +1,10 @@
+
+# 他のライブラリに必要なものもこっから呼び出してやる
+    function csr_score_damage:core/init
+    function score_to_health:load
+    function forward_spreader:core/load
+    function oh_my_dat:sys/load
+
 # スコアボード作成
     scoreboard objectives add S.Rif_Sneak minecraft.custom:sneak_time
     scoreboard objectives add S.Rif_Shot minecraft.used:crossbow
@@ -56,5 +63,3 @@
 # ルールが存在してなかったら定義
     execute unless score $S.Rif_Setting1 Chuz.Rule = $S.Rif_Setting1 Chuz.Rule run scoreboard players set $S.Rif_Setting1 Chuz.Rule 1
     execute unless score $S.Rif_Setting2 Chuz.Rule = $S.Rif_Setting2 Chuz.Rule run scoreboard players set $S.Rif_Setting2 Chuz.Rule 0
-
-# データ取るデータパックの個数を定義するやつ

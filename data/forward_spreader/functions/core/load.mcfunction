@@ -2,7 +2,6 @@
 #
 # 初期化処理
 #
-# @within tag/function minecraft:load
 
 forceload add 0 0
 

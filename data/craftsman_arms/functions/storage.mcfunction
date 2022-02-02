@@ -1,6 +1,6 @@
 
 # 取得
-    function light_system:tick
+    #function light_system:get
 
 # スコープライフル
     # メインハンドに入ってる時のメイン処理

@@ -2,7 +2,6 @@
 #
 # スコアボードを用意する
 #
-# @within tag/function minecraft:load
 
 #> 詳細はfunctionのホバー情報を確認してください
 # @public
