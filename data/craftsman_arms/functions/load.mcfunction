@@ -42,7 +42,7 @@
 
 # ダメージ受けたときのやつ
     scoreboard objectives add Chuz.HitCheck dummy
-
+    
 # スコアIDだ
     scoreboard objectives add Chuz_Pl.IDCore dummy
     scoreboard objectives add Chuz_Pl.ID dummy
@@ -56,3 +56,5 @@
 # ルールが存在してなかったら定義
     execute unless score $S.Rif_Setting1 Chuz.Rule = $S.Rif_Setting1 Chuz.Rule run scoreboard players set $S.Rif_Setting1 Chuz.Rule 1
     execute unless score $S.Rif_Setting2 Chuz.Rule = $S.Rif_Setting2 Chuz.Rule run scoreboard players set $S.Rif_Setting2 Chuz.Rule 0
+
+# データ取るデータパックの個数を定義するやつ

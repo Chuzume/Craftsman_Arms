@@ -16,7 +16,7 @@
     execute if entity @s[scores={S.Rif_Charge=30}] run playsound minecraft:block.note_block.bell player @a ~ ~ ~ 1 1.5
     
 # 離して発砲
-    execute unless score @s[scores={S.Rif_Charge=13..29}] S.Rif_Sneak matches 0.. unless data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function craftsman_arms:item/scoped_rifle/fire/charged
+    execute unless score @s[scores={S.Rif_Charge=13..29}] S.Rif_Sneak matches 0.. unless data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function craftsman_arms:item/scoped_rifle/fire/normal
 
 # シャープシュート
     execute unless score @s[scores={S.Rif_Charge=30..}] S.Rif_Sneak matches 0.. unless data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function craftsman_arms:item/scoped_rifle/fire/sharpshoot
@@ -24,8 +24,8 @@
 # 残弾0なら失敗
    execute unless score @s[scores={S.Rif_Charge=13..}] S.Rif_Sneak matches 0.. if data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function craftsman_arms:item/scoped_rifle/fire/out_of_ammo
 
-# 残弾0でエイムしてない場合はリロードをする
-    execute unless score @s[tag=!Chuz.UsingSpyglass] S.Rif_Sneak matches 0.. unless data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:4} run scoreboard players add @s S.Rif_Ready 1
+# 残弾0でリロードをする
+    execute unless score @s S.Rif_Sneak matches 0.. unless data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:4} run scoreboard players add @s S.Rif_Ready 1
 
 # 弾がマックスになったらおしまい
     execute if data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:4} run scoreboard players reset @s S.Rif_Ready 
@@ -38,7 +38,7 @@
 
 # スコープまたはスニークでリロードを中断
     execute if predicate craftsman_arms:sneak run function craftsman_arms:item/scoped_rifle/score_reset
-    execute if entity @s[tag=Chuz.UsingSpyglass] run function craftsman_arms:item/scoped_rifle/score_reset
+    #execute if entity @s[tag=Chuz.UsingSpyglass] run function craftsman_arms:item/scoped_rifle/score_reset
 
 # ズームタグリセット
     tag @s[tag=Chuz.UsingSpyglass] remove Chuz.UsingSpyglass

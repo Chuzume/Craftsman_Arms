@@ -18,8 +18,6 @@
 # 火薬パワーでなんか吹っ飛ばす
     execute positioned ^ ^ ^2.5 as @e[type=!#craftsman_arms:unhurtable,tag=!Chuz.This,nbt=!{Invulnerable:1b},distance=..2] at @s facing entity @p[tag=Chuz.This] feet run function craftsman_arms:item/gunblade/melee/charge_smash/hit
     execute positioned ^ ^ ^6 as @e[type=!#craftsman_arms:unhurtable,tag=!Chuz.This,nbt=!{Invulnerable:1b},distance=..2] at @s facing entity @p[tag=Chuz.This] feet run function craftsman_arms:item/gunblade/melee/charge_smash/hit
-    #execute positioned ^ ^ ^2.5 as @e[tag=Test,distance=..2] at @s facing entity @p[tag=Chuz.This] feet run say Hit
-    #execute positioned ^ ^ ^6 as @e[tag=Test,distance=..2] at @s facing entity @p[tag=Chuz.This] feet run say Hit2
 
 # リセットと残弾消費
     execute in overworld run function craftsman_arms:item/consume_ammo

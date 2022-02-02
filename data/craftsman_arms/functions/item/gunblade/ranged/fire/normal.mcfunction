@@ -11,10 +11,8 @@
 # 弾を召喚
     # 腰だめ
         execute anchored eyes run particle smoke ^-0.25 ^ ^0.7 0 0 0 0.05 5
-        #execute anchored eyes run summon armor_stand ^-0.25 ^ ^ {Silent:1b,Marker:1b,Invisible:1b,Tags:["S.Rif_Projectile","Chuz_UUIDAttack","S.Rif_Init"],ArmorItems:[{id:"minecraft:structure_void",Count:1b,tag:{ChuzData:{BodyDamage:6.0,HeadDamage:8.0,Speed:60,Range:400}}},{},{},{}]}
-        execute anchored eyes run summon marker ^-0.25 ^ ^ {Tags:["S.Rif_Projectile","Chuz_UUIDAttack","S.Rif_Init"],data:{ChuzData:{BodyDamage:6.0,HeadDamage:8.0,Speed:60,Range:400}}}
-        execute unless score @s S.Rif_Burst matches 1.. as @p[tag=Chuz.This] at @s run function craftsman_arms:item/gunblade/ranged/fire/spread
-        execute if score @s S.Rif_Burst matches 1.. as @p[tag=Chuz.This] at @s run function craftsman_arms:item/gunblade/ranged/fire/spread_burst
+        execute unless score @s S.Rif_Burst matches 1.. anchored eyes run summon marker ^-0.25 ^ ^ {Tags:["S.Rif_Projectile","Chuz_UUIDAttack","S.Rif_Init"],data:{ChuzData:{BodyDamage:6.0,HeadDamage:8.0,Speed:60,Range:400,Distance:10.0f,Spread:0.1f}}}
+        execute if score @s S.Rif_Burst matches 1.. anchored eyes run summon marker ^-0.25 ^ ^ {Tags:["S.Rif_Projectile","Chuz_UUIDAttack","S.Rif_Init"],data:{ChuzData:{BodyDamage:6.0,HeadDamage:8.0,Speed:60,Range:400,Distance:10.0f,Spread:1.0f}}}
 
 # 弾丸にInit処理
     tag @e[type=marker,tag=S.Rif_Init,limit=1] add S.Rif_Bullet

@@ -1,7 +1,6 @@
 
 # 取得
-    data modify storage chuz:context Item.Mainhand set from entity @s SelectedItem 
-    data modify storage chuz:context Item.Offhand set from entity @s Inventory[{Slot:-106b}]
+    function light_system:tick
 
 # スコープライフル
     # メインハンドに入ってる時のメイン処理
@@ -25,7 +24,7 @@
     # 剣モード
         execute if data storage chuz:context Item.Mainhand.tag.ChuzData{ItemID:Craftsman_Gunblade,ItemMode:Melee} run function craftsman_arms:item/gunblade/melee/main
     # オフハンドに入れると変形する
-        execute if data storage chuz:context Item.Offhand.tag.ChuzData{ItemID:Craftsman_Gunblade} in overworld run function craftsman_arms:item/gunblade/switch
+        execute if data storage chuz:context Item.Inventory[{Slot:-106b}].tag.ChuzData{ItemID:Craftsman_Gunblade} in overworld run function craftsman_arms:item/gunblade/switch
 
 # 共通処理
     # 手放すとリロードリセット
@@ -35,7 +34,4 @@
         execute unless entity @s[tag=S.Rif_Charge] run scoreboard players reset @s S.Rif_Charge
         tag @s[tag=S.Rif_Charge] remove S.Rif_Charge
     # オフハンドに入れると戻ってくる
-        execute if data storage chuz:context Item.Offhand.tag.ChuzData{NoOffhand:true} run function craftsman_arms:item/no_offhand
-
-# 削除
-    data remove storage chuz:context Item
+        execute if data storage chuz:context Item.Inventory[{Slot:-106b}].tag.ChuzData{NoOffhand:true} run function craftsman_arms:item/no_offhand
