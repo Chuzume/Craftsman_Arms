@@ -24,4 +24,4 @@
     scoreboard players operation @s Chuz_En.ID = @p Chuz_Pl.ID
 
 # タグ削除
-    tag @s remove S.Rif_Init
+    tag @s remove Chuz.Projectile_Init

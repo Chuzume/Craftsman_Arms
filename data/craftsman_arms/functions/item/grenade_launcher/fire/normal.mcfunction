@@ -11,8 +11,8 @@
     function craftsman_arms:item/grenade_launcher/fire/summon
 
 # 弾丸にInit処理
-    scoreboard players set @e[type=item,tag=S.Rif_Init,limit=1] Chuz.Speed 10
-    execute as @e[type=item,tag=S.Rif_Init,limit=1] at @s run function craftsman_arms:entity/grenade/init
+    scoreboard players set @e[type=item,tag=Chuz.Projectile_Init,limit=1] Chuz.Speed 10
+    execute as @e[type=item,tag=Chuz.Projectile_Init,limit=1] at @s run function craftsman_arms:entity/grenade/init
 
 # 弾が減る
     execute in overworld run function craftsman_arms:item/consume_ammo

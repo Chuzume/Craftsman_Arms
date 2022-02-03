@@ -11,12 +11,12 @@
 # 弾を召喚
     # 腰だめ
         execute anchored eyes run particle smoke ^-0.25 ^ ^0.7 0 0 0 0.05 5
-        execute unless score @s S.Rif_Burst matches 1.. anchored eyes run summon marker ^-0.25 ^ ^ {Tags:["S.Rif_Projectile","Chuz_UUIDAttack","S.Rif_Init"],data:{ChuzData:{BodyDamage:6.0,HeadDamage:8.0,Speed:60,Range:400,Distance:10.0f,Spread:0.1f}}}
-        execute if score @s S.Rif_Burst matches 1.. anchored eyes run summon marker ^-0.25 ^ ^ {Tags:["S.Rif_Projectile","Chuz_UUIDAttack","S.Rif_Init"],data:{ChuzData:{BodyDamage:6.0,HeadDamage:8.0,Speed:60,Range:400,Distance:10.0f,Spread:1.0f}}}
+        execute unless score @s S.Rif_Burst matches 1.. anchored eyes run summon marker ^-0.25 ^ ^ {Tags:["S.Rif_Projectile","Chuz_UUIDAttack","Chuz.Projectile_Init"],data:{ChuzData:{BodyDamage:6.0,HeadDamage:8.0,Speed:60,Range:400,Distance:10.0f,Spread:0.1f}}}
+        execute if score @s S.Rif_Burst matches 1.. anchored eyes run summon marker ^-0.25 ^ ^ {Tags:["S.Rif_Projectile","Chuz_UUIDAttack","Chuz.Projectile_Init"],data:{ChuzData:{BodyDamage:6.0,HeadDamage:8.0,Speed:60,Range:400,Distance:10.0f,Spread:1.0f}}}
 
 # 弾丸にInit処理
-    tag @e[type=marker,tag=S.Rif_Init,limit=1] add S.Rif_Bullet
-    execute as @e[type=marker,tag=S.Rif_Init,limit=1] at @s run function craftsman_arms:entity/projectile_common/init
+    tag @e[type=marker,tag=Chuz.Projectile_Init,limit=1] add S.Rif_Bullet
+    execute as @e[type=marker,tag=Chuz.Projectile_Init,limit=1] at @s run function craftsman_arms:entity/projectile_common/init
 
 # 弾が減る
     execute in overworld run function craftsman_arms:item/consume_ammo
