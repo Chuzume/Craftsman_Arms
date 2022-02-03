@@ -29,8 +29,8 @@
 # リロード準備が整ったら弾を込めだす
     execute if score @s S.Rif_Ready matches 30.. run function craftsman_arms:item/gunblade/reload/reloading
 
-# アイテム情報更新
-    execute if data storage chuz:context Item.Mainhand.tag.ChuzData.Ammo in overworld run function craftsman_arms:item/replaceitem
-    
 # チャージ値リセット
     execute unless score @s S.Rif_Sneak matches 1.. run scoreboard players reset @s S.Rif_Charge
+
+# 更新
+    function craftsman_arms:item/replaceitem

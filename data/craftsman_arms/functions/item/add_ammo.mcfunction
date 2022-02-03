@@ -1,3 +1,4 @@
+#> craftsman_arms:item/add_ammo
 
 # 対象スロットの残り使用回数取得
     execute store result score $AmmoReload Chuz.Temporary run data get storage chuz:context Item.Mainhand.tag.ChuzData.Ammo
@@ -15,3 +16,6 @@
 
 # スコアリセット
     scoreboard players reset @s S.Rif_Reload
+
+# 更新
+    function craftsman_arms:item/replaceitem

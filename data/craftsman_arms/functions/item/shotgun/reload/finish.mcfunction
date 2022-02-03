@@ -30,3 +30,6 @@
     tag @s remove S.Rif_ReloadFailed
     tag @s remove S.Rif_ReloadSuccess
     scoreboard players reset @s S.Rif_Reload
+
+# 更新
+    function craftsman_arms:item/replaceitem

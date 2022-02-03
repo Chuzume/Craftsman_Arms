@@ -23,6 +23,3 @@
 
 # リロード
     execute if data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function craftsman_arms:item/shotgun/reload/start
-
-# アイテム情報更新
-    execute if data storage chuz:context Item.Mainhand.tag.ChuzData.Ammo in overworld run function craftsman_arms:item/replaceitem

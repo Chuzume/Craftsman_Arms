@@ -1,6 +1,7 @@
 
 # 取得
-    #function light_system:get
+    function craftsman_arms:get_data/
+
 
 # スコープライフル
     # メインハンドに入ってる時のメイン処理

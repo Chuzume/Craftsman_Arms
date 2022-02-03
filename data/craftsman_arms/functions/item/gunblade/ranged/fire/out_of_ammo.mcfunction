@@ -11,3 +11,6 @@
     scoreboard players reset @s S.Rif_Charge
     scoreboard players remove @s S.Rif_Burst 1
     tag @s remove Chuz.This
+
+# 更新
+    function craftsman_arms:item/replaceitem
