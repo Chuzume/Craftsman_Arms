@@ -1,6 +1,5 @@
 
-# 今持ってるよ
-    tag @s add S.Rif_Hold
+
 
 # 弾チェックして持ってたスコア加算
     execute if score $S.Rif_Setting1 Chuz.Rule matches 1 store success score @s Chuz.Temporary run clear @s chain_command_block{ChuzData:{ItemID:Explosive_Cartridge}} 0

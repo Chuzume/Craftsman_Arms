@@ -1,8 +1,4 @@
 
-# 今持ってるよ
-    tag @s add S.Rif_Hold
-    tag @s add S.Rif_Charge
-
 # 発砲
     execute unless score @s[scores={S.Rif_Shot=0..}] S.Rif_Charge matches 30.. unless data storage chuz:context Item.Mainhand.tag.ChuzData{Ammo:0} run function craftsman_arms:item/gunblade/ranged/fire/normal
     # 残弾0なら失敗

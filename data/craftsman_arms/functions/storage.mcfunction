@@ -2,7 +2,6 @@
 # 取得
     function craftsman_arms:get_data/
 
-
 # スコープライフル
     # メインハンドに入ってる時のメイン処理
         execute if data storage chuz:context Item.Mainhand.tag.ChuzData{ItemID:Craftsman_Scoped_Rifle} run function craftsman_arms:item/scoped_rifle/main
@@ -27,12 +26,12 @@
     # オフハンドに入れると変形する
         execute if data storage chuz:context Item.Inventory[{Slot:-106b}].tag.ChuzData{ItemID:Craftsman_Gunblade} in overworld run function craftsman_arms:item/gunblade/switch
 
+# 手持ちチェック
+    function craftsman_arms:get_data/item_check
+
 # 共通処理
-    # 手放すとリロードリセット
-        execute unless entity @s[tag=S.Rif_Hold] run function craftsman_arms:item/scoped_rifle/score_reset
-        tag @s[tag=S.Rif_Hold] remove S.Rif_Hold
-    # 手放すとチャージリセット
-        execute unless entity @s[tag=S.Rif_Charge] run scoreboard players reset @s S.Rif_Charge
-        tag @s[tag=S.Rif_Charge] remove S.Rif_Charge
+    # アイテムが変わったら状態リセット
+        execute if entity @s[scores={Chuz.ItemCheck=1}] run function craftsman_arms:item/score_reset
+
     # オフハンドに入れると戻ってくる
         execute if data storage chuz:context Item.Inventory[{Slot:-106b}].tag.ChuzData{NoOffhand:true} run function craftsman_arms:item/no_offhand

@@ -33,6 +33,7 @@
     scoreboard objectives add Col_Check_Temp dummy
     scoreboard objectives add Chuz.Calc dummy
     scoreboard objectives add Chuz.Rule dummy
+    scoreboard objectives add Chuz.ItemCheck dummy
 
 # 飛び道具の弾速
     scoreboard objectives add Chuz.Range dummy

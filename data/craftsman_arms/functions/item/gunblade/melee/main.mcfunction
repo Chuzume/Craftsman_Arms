@@ -1,8 +1,4 @@
 
-# 今持ってるよ
-    tag @s add S.Rif_Hold
-    tag @s add S.Rif_Charge
-
 # ステップ
     execute unless score @s[scores={S.Rif_RClick=0..}] S.Rif_Sneak matches 0.. if entity @s[nbt={OnGround:1b}] run function craftsman_arms:item/gunblade/melee/step/main
     # ステップパーティクル

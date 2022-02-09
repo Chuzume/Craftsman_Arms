@@ -25,7 +25,6 @@
     data modify storage chuz:context Item.Offhand merge value {Slot:0b}
     data modify block 100001 0 100000 Items set value []
 
-
 # 置き換え
     execute store result storage chuz:context Item.Offhand.tag.ChuzData.Ammo int 1 run scoreboard players get $Ammo Chuz.Temporary
     data modify block 100001 0 100000 Items append from storage chuz:context Item.Offhand
@@ -35,10 +34,6 @@
 
 # 左手が素手だった場合の処理    
     execute unless data storage chuz:context Item.Mainhand run item replace entity @s weapon.offhand with air
-
-
-# まじない？
-    tag @s add S.Rif_Hold
 
 # リセット
     tag @s remove S.Rif_Steping

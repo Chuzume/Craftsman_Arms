@@ -1,8 +1,3 @@
-
-# 今持ってるよ
-    tag @s add S.Rif_Hold
-    tag @s add S.Rif_Charge
-
 # スニークでチャージ
     scoreboard players add @s[scores={S.Rif_Sneak=0..}] S.Rif_Charge 1 
 
