@@ -1,5 +1,3 @@
-# Tickの更新は忘れないで
-    execute store result storage global Time int 1 run time query gametime
 
 # お願いOhMyDat!
     function oh_my_dat:please
