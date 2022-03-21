@@ -12,7 +12,7 @@
     
 # 落下速度リセットしてAECで打ち上げる
     tp @s 0 0 0
-    tp ~ ~0.0 ~
+    tp ~ ~0.09 ~
     execute at @s run summon area_effect_cloud ~ ~0.5 ~ {Radius:0.0f,Duration:6,DurationOnUse:0,Age:4,Effects:[{Id:5b,Amplifier:0b,Duration:8},{Id:11b,Amplifier:3b,Duration:8},{Id:25b,Amplifier:20b,Duration:3,ShowParticles:0b},{Id:28b,Amplifier:0b,Duration:10,ShowParticles:0b}]}
 
 # 数を指定して当たり判定用のスライムをぶつける
