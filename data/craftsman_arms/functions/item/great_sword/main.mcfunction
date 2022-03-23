@@ -8,7 +8,7 @@
     execute unless score @s S.Rif_Sneak matches 1.. run scoreboard players reset @s S.Rif_Charge
 
 # コンボ1
-    execute if entity @s[scores={S.Rif_RClick=0..}] run function craftsman_arms:item/great_sword/swing/combo1
+    execute if entity @s[scores={S.Rif_RClickBook=0..}] run function craftsman_arms:item/great_sword/swing/combo1
 
 # コンボ値
     scoreboard players remove @s[scores={S.Rif_ComboWait=0..}] S.Rif_ComboWait 1

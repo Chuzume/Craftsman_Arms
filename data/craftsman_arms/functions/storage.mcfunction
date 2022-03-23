@@ -27,8 +27,13 @@
         execute if data storage chuz:context Item.Inventory[{Slot:-106b}].tag.ChuzData{ItemID:Craftsman_Gunblade} in overworld run function craftsman_arms:item/gunblade/switch
 
 # グレートソード
+    # タグ付与
+        execute if data storage chuz:context Item.Mainhand.tag.ChuzData{ItemID:Forgesoul_Greatsword} run tag @s add S.Rif_HoldGreatSword
     # メイン
-        execute if data storage chuz:context Item.Mainhand.tag.ChuzData{ItemID:Craftsman_Greatsword} run function craftsman_arms:item/great_sword/main
+     execute if entity @s[tag=S.Rif_HoldGreatSword] run function craftsman_arms:item/great_sword/main
+
+# タグ削除
+    execute unless data storage chuz:context Item.Mainhand.tag.ChuzData{ItemID:Forgesoul_Greatsword} run tag @s remove S.Rif_HoldGreatSword
 
 # 共通処理
     # アイテムが変わったら状態リセット

@@ -9,6 +9,7 @@
     scoreboard objectives add S.Rif_Sneak minecraft.custom:sneak_time
     scoreboard objectives add S.Rif_Shot minecraft.used:crossbow
     scoreboard objectives add S.Rif_RClick minecraft.used:warped_fungus_on_a_stick
+    scoreboard objectives add S.Rif_RClickBook minecraft.used:knowledge_book
     scoreboard objectives add S.Rif_Charge dummy
     scoreboard objectives add S.Rif_Reload dummy
     scoreboard objectives add S.Rif_Ready dummy
@@ -17,6 +18,9 @@
     scoreboard objectives add S.Rif_Burst dummy
     scoreboard objectives add S.Rif_Combo dummy
     scoreboard objectives add S.Rif_ComboWait dummy
+    scoreboard objectives add S.Rif_Rotation dummy
+    scoreboard objectives add S.Rif_RotSpeed dummy
+    scoreboard objectives add S.Rif_RotDistance dummy
 
 # Chuz.Vector0が存在しなければ召喚
     forceload add 0 0 0 0

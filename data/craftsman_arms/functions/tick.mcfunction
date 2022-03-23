@@ -24,3 +24,4 @@
     scoreboard players reset @a[scores={S.Rif_Sneak=0..}] S.Rif_Sneak
     scoreboard players reset @a[scores={S.Rif_Shot=1..}] S.Rif_Shot
     scoreboard players reset @a[scores={S.Rif_RClick=0..}] S.Rif_RClick
+    scoreboard players reset @a[scores={S.Rif_RClickBook=1..}] S.Rif_RClickBook
