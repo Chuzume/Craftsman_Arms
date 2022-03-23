@@ -26,6 +26,10 @@
     # オフハンドに入れると変形する
         execute if data storage chuz:context Item.Inventory[{Slot:-106b}].tag.ChuzData{ItemID:Craftsman_Gunblade} in overworld run function craftsman_arms:item/gunblade/switch
 
+# グレートソード
+    # メイン
+        execute if data storage chuz:context Item.Mainhand.tag.ChuzData{ItemID:Craftsman_Greatsword} run function craftsman_arms:item/great_sword/main
+
 # 共通処理
     # アイテムが変わったら状態リセット
         execute if entity @s[scores={Chuz.ItemCheck=1}] run function craftsman_arms:item/score_reset

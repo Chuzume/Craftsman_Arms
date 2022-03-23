@@ -8,4 +8,6 @@
 
     execute if entity @s[tag=S.Rif_Shell_Enemy] run function craftsman_arms:entity/shell_enemy/tick
 
+    execute if entity @s[tag=S.Rif_GreatSword] run function craftsman_arms:entity/great_sword/main
+
 # 

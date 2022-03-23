@@ -5,6 +5,9 @@
 # 飛び道具チェック 
     execute as @e[type=#craftsman_arms:projectile,tag=S.Rif_Projectile] at @s run function craftsman_arms:entity/projectile_check
 
+# 動くやつ
+    execute as @e[type=area_effect_cloud,tag=Mover] at @s run function craftsman_arms:entity/great_sword/mover_main
+
 # スライムを消す
     execute as @e[type=magma_cube,tag=S.Rif_Slime] at @s run function craftsman_arms:entity/col_slime/main
 

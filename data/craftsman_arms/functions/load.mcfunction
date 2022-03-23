@@ -15,6 +15,8 @@
     scoreboard objectives add S.Rif_Recursive dummy
     scoreboard objectives add S.Rif_Remove dummy
     scoreboard objectives add S.Rif_Burst dummy
+    scoreboard objectives add S.Rif_Combo dummy
+    scoreboard objectives add S.Rif_ComboWait dummy
 
 # Chuz.Vector0が存在しなければ召喚
     forceload add 0 0 0 0
