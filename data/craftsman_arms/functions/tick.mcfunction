@@ -6,7 +6,10 @@
     execute as @e[type=#craftsman_arms:projectile,tag=S.Rif_Projectile] at @s run function craftsman_arms:entity/projectile_check
 
 # 動くやつ
-    execute as @e[type=area_effect_cloud,tag=Mover] at @s run function craftsman_arms:entity/great_sword/mover_main
+    execute as @e[type=area_effect_cloud,tag=Mover] at @s run function craftsman_arms:entity/great_sword/main_mover
+
+# 動くやつ
+    execute as @e[type=armor_stand,tag=S.Rif_Sweep] at @s run function craftsman_arms:entity/great_sword/sweep/main
 
 # スライムを消す
     execute as @e[type=magma_cube,tag=S.Rif_Slime] at @s run function craftsman_arms:entity/col_slime/main
