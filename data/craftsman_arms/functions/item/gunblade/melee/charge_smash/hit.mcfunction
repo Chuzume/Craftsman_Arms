@@ -6,8 +6,6 @@
     tag @s add S.Rif_Hit.ChargeSmash
     tag @s add Chuz.HitReact
 
-say @a[tag=Chuz.This]
-
 # ヒット音
     playsound minecraft:entity.player.attack.strong neutral @a ~ ~ ~ 1.5 1
 
