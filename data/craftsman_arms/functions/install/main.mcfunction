@@ -7,4 +7,4 @@ scoreboard players set $S.Rif_Setting2 Chuz.Rule 0
 # Chuz.Vector0が存在しなければ召喚
     forceload add 0 0 0 0
     kill @e[type=area_effect_cloud,tag=Chuz.Vector0]
-    execute unless entity @e[type=area_effect_cloud,tag=Chuz.Vector0] run summon minecraft:area_effect_cloud 0 0 0 {Tags:["Chuz.Vector0"],Duration:-1,Age:-2147483648,WaitTime:-2147483648}
+    execute unless entity @e[type=marker,tag=Chuz.Vector0] run summon marker 0 0 0 {Tags:["Chuz.Vector0"]}

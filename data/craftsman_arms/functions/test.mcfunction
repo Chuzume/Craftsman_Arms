@@ -1,3 +1,4 @@
-data modify storage csr_score_damage: Damage set value 5.0
-function csr_score_damage:api/attack
-data remove storage csr_score_damage: Damage
+# 後ろに飛んでいく
+    scoreboard players set @s Chuz.Speed 15
+    execute facing entity @p feet run function craftsman_arms:entity/motion_xz
+    scoreboard players reset @s Chuz.Speed
