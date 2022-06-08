@@ -6,6 +6,13 @@
     execute if score @s Test matches 11 run scoreboard players set @s S.Rif_RotSpeed 10
     execute if score @s Test matches 13 run scoreboard players set @s S.Rif_RotSpeed 5
     execute if score @s Test matches 14 run scoreboard players set @s S.Rif_RotSpeed 0
+
+    execute if score @s Test matches 20 rotated ~-90 ~ positioned ^-0.3 ^1.4 ^1.9 run particle minecraft:end_rod ~ ~ ~ 0 0 0 0.02 1
+    execute if score @s Test matches 20 rotated ~-90 ~ positioned ^-0.3 ^1.4 ^1.7 run particle minecraft:end_rod ~ ~ ~ 0 0 0 0.02 1
+    execute if score @s Test matches 20 rotated ~-90 ~ positioned ^-0.3 ^1.4 ^1.5 run particle minecraft:end_rod ~ ~ ~ 0 0 0 0.02 1
+    execute if score @s Test matches 20 rotated ~-90 ~ positioned ^-0.3 ^1.4 ^1.3 run particle minecraft:end_rod ~ ~ ~ 0 0 0 0.02 1
+    execute if score @s Test matches 20 rotated ~-90 ~ positioned ^-0.3 ^1.4 ^1.1 run particle minecraft:end_rod ~ ~ ~ 0 0 0 0.02 1
+
     tag @s[scores={Test=20..}] add S.Rif_Kill
 
 # 進んだ距離

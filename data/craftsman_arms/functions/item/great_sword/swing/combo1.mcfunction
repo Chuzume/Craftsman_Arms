@@ -30,6 +30,10 @@
 # 下のAECに処理
     execute as @e[type=area_effect_cloud,tag=MoverInit,limit=1] at @s run function craftsman_arms:entity/great_sword/init_mover
 
+# 数を指定して当たり判定用のスライムをぶつける
+    execute if entity @s[scores={S.Rif_Combo=2}] run scoreboard players set @s S.Rif_Recursive 70
+    execute if entity @s[scores={S.Rif_Combo=2}] at @s rotated ~ 0 positioned ^ ^ ^-0.2 run function craftsman_arms:item/gunblade/summon_recursive
+
 # 手持ち変更
     item replace entity @s weapon.mainhand with air
     loot replace entity @s weapon.mainhand loot craftsman_arms:item/greatsword/used
