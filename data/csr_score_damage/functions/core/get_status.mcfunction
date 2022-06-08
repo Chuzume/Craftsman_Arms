@@ -17,6 +17,18 @@
     execute store result score $EPF ScoreDamageCore run data get storage csr_score_damage: EPF
     execute unless score $EPF ScoreDamageCore matches 0.. run function csr_score_damage:core/get_default_epf
 # 耐性エフェクト
-    execute if data storage csr_score_damage: {BypassResistance:0b} store result score $Resistance ScoreDamageCore run data get entity @s ActiveEffects[{Id:11b}].Amplifier
-    execute if data storage csr_score_damage: {BypassResistance:0b} if data entity @s ActiveEffects[{Id:11b}] run scoreboard players add $Resistance ScoreDamageCore 1
-    execute if data storage csr_score_damage: {BypassResistance:1b} run scoreboard players set $Resistance ScoreDamageCore 0
+    #execute if data storage csr_score_damage: {BypassResistance:0b} store result score $Resistance ScoreDamageCore run data get entity @s ActiveEffects[{Id:11}].Amplifier
+    #execute if data storage csr_score_damage: {BypassResistance:0b} if data entity @s ActiveEffects[{Id:11}] run scoreboard players add $Resistance ScoreDamageCore 1
+    #execute if data storage csr_score_damage: {BypassResistance:1b} run scoreboard players set $Resistance ScoreDamageCore 0
+
+    # 耐性エフェクト
+    # 1.19
+        execute if data storage csr_score_damage: {BypassResistance:0b} if data entity @s ActiveEffects[{Id:11}] store result score $Resistance ScoreDamageCore run data get entity @s ActiveEffects[{Id:11}].Amplifier
+        execute if data storage csr_score_damage: {BypassResistance:0b} if data entity @s ActiveEffects[{Id:11}] run scoreboard players add $Resistance ScoreDamageCore 1
+    
+    # 1.18
+        execute if data storage csr_score_damage: {BypassResistance:0b} if data entity @s ActiveEffects[{Id:11b}] store result score $Resistance ScoreDamageCore run data get entity @s ActiveEffects[{Id:11}].Amplifier
+        execute if data storage csr_score_damage: {BypassResistance:0b} if data entity @s ActiveEffects[{Id:11b}] run scoreboard players add $Resistance ScoreDamageCore 1
+
+    # 貫通ダメージ
+        execute if data storage csr_score_damage: {BypassResistance:1b} run scoreboard players set $Resistance ScoreDamageCore 0
