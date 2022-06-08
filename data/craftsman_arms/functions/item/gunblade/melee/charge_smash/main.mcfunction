@@ -16,8 +16,8 @@
     execute anchored eyes rotated ~ ~90 positioned ^ ^6 ^ run function craftsman_arms:item/gunblade/melee/charge_smash/shape
 
 # 火薬パワーでなんか吹っ飛ばす
-    execute positioned ^ ^ ^2.5 as @e[type=!#craftsman_arms:unhurtable,tag=!Chuz.This,nbt=!{Invulnerable:1b},distance=..2] at @s facing entity @p[tag=Chuz.This] feet run function craftsman_arms:item/gunblade/melee/charge_smash/hit
-    execute positioned ^ ^ ^6 as @e[type=!#craftsman_arms:unhurtable,tag=!Chuz.This,nbt=!{Invulnerable:1b},distance=..2] at @s facing entity @p[tag=Chuz.This] feet run function craftsman_arms:item/gunblade/melee/charge_smash/hit
+    execute positioned ^ ^ ^2.5 as @e[type=!#craftsman_arms:unhurtable,tag=!Chuz.This,nbt=!{Invulnerable:1b},gamemode=!creative,gamemode=!spectator,distance=..2] at @s facing entity @p[tag=Chuz.This] feet run function craftsman_arms:item/gunblade/melee/charge_smash/hit
+    execute positioned ^ ^ ^6 as @e[type=!#craftsman_arms:unhurtable,tag=!Chuz.This,nbt=!{Invulnerable:1b},gamemode=!creative,gamemode=!spectator,distance=..2] at @s facing entity @p[tag=Chuz.This] feet run function craftsman_arms:item/gunblade/melee/charge_smash/hit
 
 # リセットと残弾消費
     execute in overworld run function craftsman_arms:item/consume_ammo
