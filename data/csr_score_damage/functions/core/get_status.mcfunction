@@ -27,7 +27,7 @@
         execute if data storage csr_score_damage: {BypassResistance:0b} if data entity @s ActiveEffects[{Id:11}] run scoreboard players add $Resistance ScoreDamageCore 1
     
     # 1.18
-        execute if data storage csr_score_damage: {BypassResistance:0b} if data entity @s ActiveEffects[{Id:11b}] store result score $Resistance ScoreDamageCore run data get entity @s ActiveEffects[{Id:11}].Amplifier
+        execute if data storage csr_score_damage: {BypassResistance:0b} if data entity @s ActiveEffects[{Id:11b}] store result score $Resistance ScoreDamageCore run data get entity @s ActiveEffects[{Id:11b}].Amplifier
         execute if data storage csr_score_damage: {BypassResistance:0b} if data entity @s ActiveEffects[{Id:11b}] run scoreboard players add $Resistance ScoreDamageCore 1
 
     # 貫通ダメージ
