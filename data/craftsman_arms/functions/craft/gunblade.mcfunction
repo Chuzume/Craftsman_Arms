@@ -1,8 +1,14 @@
+#> craftsman_arms:craft/gunblade
+#
+# アイテム作ったときの処理
+#
+# @within advancement craftsman_arms:craft/gunblade
+
 # まぁまずはアイテムが必要であろう
     execute at @s run loot spawn ~ ~ ~ loot craftsman_arms:item/gunblade/ranged
 
 # すぐ拾いてえよ
-    data modify entity @e[type=item,limit=1,sort=nearest] PickupDelay set value 0
+    data modify entity @e[type=item,sort=nearest,limit=1] PickupDelay set value 0
 
 # 次回以降も実行するためにレシピ没収
     recipe take @s craftsman_arms:gunblade
