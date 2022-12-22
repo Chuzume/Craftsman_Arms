@@ -1,3 +1,9 @@
+#> craftsman_arms:load
+#
+# ロード処理
+#
+# @within tag/function minecraft:load
+
 
 # 他のライブラリに必要なものもこっから呼び出してやる
     function csr_score_damage:core/init
